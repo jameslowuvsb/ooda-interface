@@ -1,0 +1,39 @@
+{
+  "name": "ooda",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/copy-cesium.mjs",
+    "predev": "node scripts/copy-cesium.mjs",
+    "prebuild": "node scripts/copy-cesium.mjs",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "config": "node scripts/api-signup/config.mjs",
+    "signup": "node scripts/api-signup/signup-all.mjs",
+    "validate-keys": "node scripts/api-signup/validate-keys.mjs"
+  },
+  "dependencies": {
+    "cesium": "^1.138.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "resium": "^1.19.4",
+    "satellite.js": "^6.0.2",
+    "ws": "^8.20.1",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/ws": "^8.18.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "playwright": "^1.60.0",
+    "tailwindcss": "^4.0.7",
+    "typescript": "^5"
+  }
+}

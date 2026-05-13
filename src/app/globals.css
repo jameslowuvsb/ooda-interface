@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --ooda-green: #00ff41;
+  --ooda-dark: #000a00;
+  --ooda-border: rgba(0, 255, 65, 0.15);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ooda-green) transparent;
+}
+
+body {
+  background: var(--ooda-dark);
+  color: var(--ooda-green);
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  overflow: hidden;
+}
+
+/* Cesium viewer overrides */
+.cesium-viewer {
+  background: var(--ooda-dark) !important;
+}
+
+.cesium-viewer .cesium-widget-credits {
+  display: none !important;
+}
+
+.cesium-viewer .cesium-viewer-bottom {
+  display: none !important;
+}
+
+/* Scope viewport — circular globe */
+.scope-viewport {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--ooda-border);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.05), inset 0 0 60px rgba(0, 0, 0, 0.3);
+}
+
+/* HUD glow effect */
+.hud-glow {
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
+}
+
+/* Crosshair overlay */
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 255, 65, 0.15);
+  z-index: 50;
+  pointer-events: none;
+}
+
+.crosshair::before {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+.crosshair::after {
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+}
+
+/* Range rings */
+.range-ring {
+  position: absolute;
+  border: 1px solid rgba(0, 255, 65, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 50;
+}
