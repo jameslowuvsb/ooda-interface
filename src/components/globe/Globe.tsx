@@ -9,6 +9,7 @@ import { FlightLayer } from "@/components/layers/FlightLayer";
 import { SatelliteLayer } from "@/components/layers/SatelliteLayer";
 import { EarthquakeLayer } from "@/components/layers/EarthquakeLayer";
 import { VesselLayer } from "@/components/layers/VesselLayer";
+import { CoverageGapLayer } from "@/components/layers/CoverageGapLayer";
 import { NewsLayer } from "@/components/layers/NewsLayer";
 import { ChokepointLayer } from "@/components/layers/ChokepointLayer";
 import { WeatherLayer } from "@/components/layers/WeatherLayer";
@@ -179,6 +180,7 @@ export function Globe() {
           {layers.satellites && <SatelliteLayer viewer={viewerRef.current} />}
           {layers.earthquakes && <EarthquakeLayer viewer={viewerRef.current} />}
           {layers.vessels && <VesselLayer viewer={viewerRef.current} />}
+          {layers.vessels && <CoverageGapLayer viewer={viewerRef.current} />}
           {layers.news && <NewsLayer viewer={viewerRef.current} />}
           {layers.weather && <WeatherLayer viewer={viewerRef.current} />}
           <ChokepointLayer viewer={viewerRef.current} />
